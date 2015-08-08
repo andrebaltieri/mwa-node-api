@@ -37,6 +37,7 @@ app.post('/api/users', userController.create);
 app.post('/api/account/authenticate', accountController.authenticate);
 app.get('/api/account/info', auth.authorize, accountController.info);
 app.get('/api/products', productController.list);
+app.get('/api/products/:id', productController.show);
 app.post('/api/products', auth.authorize, productController.create);
 
 // catch 404 and forward to error handler
